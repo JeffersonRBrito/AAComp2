@@ -1,4 +1,5 @@
 package Intalacoes;
 
-public abstract class ElementoInstalacao {
+public abstract class ElementoInstalacao{
+
 }
