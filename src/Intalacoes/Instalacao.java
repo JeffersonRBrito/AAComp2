@@ -12,6 +12,35 @@ public abstract class Instalacao {
     private ArrayList<Animal> animaisInstalados;
     private ArrayList<ElementoInstalacao> elementosInstalacao;
 
-    public abstract boolean instalaAnimal(Animal animal);
-    public abstract void addElementoInstalacao(ElementoInstalacao elementoInstalacao);
+    public Instalacao(
+            int capacidadeMaxima,
+            Localizacao localizacao,
+            double temperatura) {
+        this.capacidadeMaxima = capacidadeMaxima;
+        this.localizacao = localizacao;
+        this.temperatura = temperatura;
+        this.animaisInstalados = new ArrayList<Animal>();
+        this.elementosInstalacao = new ArrayList<ElementoInstalacao>();
+    }
+
+    public ArrayList<Animal> getAnimaisInstalados() {
+        return this.animaisInstalados;
+    }
+
+    public ArrayList<ElementoInstalacao> getElementosInstalacao() {
+        return this.elementosInstalacao;
+    }
+
+    public boolean instalaAnimal(Animal animal) {
+        if (this.animaisInstalados.size() < this.capacidadeMaxima) {
+            this.animaisInstalados.add(animal);
+            return true;
+        }
+
+        return false;
+    }
+
+    public void addElementoInstalacao(ElementoInstalacao elementoInstalacao) {
+        this.elementosInstalacao.add(elementoInstalacao);
+    }
 }
