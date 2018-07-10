@@ -2,8 +2,6 @@ package Intalacoes;
 
 import Enums.Localizacao;
 
-import java.util.ArrayList;
-
 public class InstalacaoElefante extends Instalacao {
     public InstalacaoElefante(Localizacao localizacao) {
         super(2, localizacao, 23);
