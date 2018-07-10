@@ -1,19 +1,13 @@
 package Intalacoes;
-
-import Interfaces.Animal;
+import Enums.Localizacao;
 
 public class InstalacaoPinguim extends Instalacao{
 
-	@Override
-	public boolean instalaAnimal(Animal animal) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	public InstalacaoPinguim(Localizacao localizacao) {
+        super(25, localizacao, 15);
 
-	@Override
-	public void addElementoInstalacao(ElementoInstalacao elementoInstalacao) {
-		// TODO Auto-generated method stub
-		
-	}
+        Tanque tanque = new Tanque(100);
+        super.addElementoInstalacao(tanque);
+    }
 
 }

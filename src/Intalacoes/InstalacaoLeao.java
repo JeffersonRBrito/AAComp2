@@ -1,19 +1,13 @@
 package Intalacoes;
-
-import Interfaces.Animal;
+import Enums.Localizacao;
 
 public class InstalacaoLeao extends Instalacao{
 
-	@Override
-	public boolean instalaAnimal(Animal animal) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	  public InstalacaoLeao(Localizacao localizacao) {
+	        super(3, localizacao, 21.5);
 
-	@Override
-	public void addElementoInstalacao(ElementoInstalacao elementoInstalacao) {
-		// TODO Auto-generated method stub
-		
-	}
+	        Jaula jaula = new Jaula(20, 30 , 25);
+	        super.addElementoInstalacao(jaula);
+	    }
 
 }
