@@ -37,10 +37,15 @@ public abstract class Instalacao {
             return true;
         }
 
+        System.out.println("Capacidade de animal atingida. Animal não instalado.");
         return false;
     }
 
     public void addElementoInstalacao(ElementoInstalacao elementoInstalacao) {
         this.elementosInstalacao.add(elementoInstalacao);
+    }
+
+    public Localizacao getLocalizacao() {
+        return this.localizacao;
     }
 }
